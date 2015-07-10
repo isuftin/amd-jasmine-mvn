@@ -110,6 +110,8 @@
 				</executions>
 				<configuration>
 					<specRunnerTemplate>REQUIRE_JS</specRunnerTemplate>
+					<jsSrcDir>${project.basedir}/src/main/webapp/scripts</jsSrcDir>
+					<jsTestSrcDir>${project.basedir}/src/main/webapp/tests</jsTestSrcDir>
 					<preloadSources>
 						<source>webjars/requirejs/${version.require}/require.js</source>
 					</preloadSources>
