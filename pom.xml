@@ -20,6 +20,7 @@
 	</properties>
 
 	<dependencies>
+		<!-- Usual JSP/Servlet deps -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -30,16 +31,22 @@
 			<artifactId>javax.servlet.jsp-api</artifactId>
 			<version>2.3.1</version>
 		</dependency>
+		
+		<!-- Property Reading utils -->
 		<dependency>
 			<groupId>gov.usgs.cida</groupId>
 			<artifactId>dynamicProperties</artifactId>
 			<version>1.0.2</version>
 		</dependency>
+		
+		<!-- Obligatory Tomcat FixerUpper Deps -->
 		<dependency>
 			<groupId>xerces</groupId>
 			<artifactId>xercesImpl</artifactId>
 			<version>2.11.0</version>
 		</dependency>
+		
+		<!-- Jersey Stuff -->
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
@@ -60,6 +67,8 @@
 			<artifactId>jersey-media-moxy</artifactId>
 			<version>2.19</version>
 		</dependency>
+		
+		<!-- WebJars Stuff -->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
@@ -74,6 +83,11 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>jasmine</artifactId>
 			<version>${version.jasmine}</version>
+		</dependency>
+		<dependency>
+			<groupId>unknown.binary</groupId>
+			<artifactId>javax.ws.rs-api-2.0</artifactId>
+			<version>SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
@@ -109,22 +123,37 @@
 					</execution>
 				</executions>
 				<configuration>
+					<debug>true</debug>
 					<specRunnerTemplate>REQUIRE_JS</specRunnerTemplate>
 					<jsSrcDir>${project.basedir}/src/main/webapp/scripts</jsSrcDir>
-					<jsTestSrcDir>${project.basedir}/src/main/webapp/tests</jsTestSrcDir>
+					<jsTestSrcDir>${project.basedir}/src/main/webapp/test/spec</jsTestSrcDir>
+					<customRunnerConfiguration>${project.build.directory}/test-classes/customJasmineConfig.txt</customRunnerConfiguration>
+					<srcDirectoryName>scripts</srcDirectoryName>
 					<preloadSources>
-						<source>webjars/requirejs/${version.require}/require.js</source>
+						<source>/webjars/requirejs/${version.require}/require.js</source>
 					</preloadSources>
 				</configuration>
 			</plugin>
 		</plugins>
 		<resources>
 			<resource>
-				<directory>src/main/resources</directory>
+				<directory>${project.basedir}/src/main/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
 		<finalName>${project.artifactId}</finalName>
 	</build>
-
+	<repositories>
+		<repository>
+			<id>unknown-jars-temp-repo</id>
+			<name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
+			<url>file:${project.basedir}/lib</url>
+		</repository>
+	</repositories>
 </project>

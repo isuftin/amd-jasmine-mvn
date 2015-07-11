@@ -1,0 +1,7 @@
+	baseUrl: 'scripts',
+	paths: {
+		'jquery': ['/webjars/jquery/${version.jquery}/jquery']
+	},
+	shim : {
+		'boot' : ['/classpath/lib/boot.js']
+	}

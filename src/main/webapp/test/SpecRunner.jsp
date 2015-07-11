@@ -28,20 +28,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/webjars/jasmine/2.2.0/jasmine_favicon.png">
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/webjars/jasmine/2.2.0/jasmine.css">
-		
-		<script data-main="jasmine-entry" src="<%=contextPath%>/webjars/requirejs/2.1.18/require.js"></script>
+		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/webjars/jasmine/<%=getProp("version.jasmine")%>/jasmine_favicon.png">
+		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/webjars/jasmine/<%=getProp("version.jasmine")%>/jasmine.css">
+
+		<script data-main="jasmine-entry" src="<%=contextPath%>/webjars/requirejs/<%=getProp("version.require")%>/require.js"></script>
 		<script>
 			require.config({
 				// to set the default folder
 				baseUrl: '<%=contextPath%>/scripts',
 				paths: {
-					'jasmine-entry' : ['<%=contextPath%>/tests/jasmine-entry'],
-					'jasmine': ['<%=contextPath%>/webjars/jasmine/2.2.0/jasmine'],
-					'jasmine-html': ['<%=contextPath%>/webjars/jasmine/2.2.0/jasmine-html'],
-					'jasmine-boot': ['<%=contextPath%>/webjars/jasmine/2.2.0/boot'],
-					'jquery': ["<%=contextPath%>/webjars/jquery/<%= getProp("version.jquery") %>/jquery"]
+					'jasmine-entry': ['<%=contextPath%>/test/jasmine-entry'],
+					'jasmine': ['<%=contextPath%>/webjars/jasmine/<%=getProp("version.jasmine")%>/jasmine'],
+					'jasmine-html': ['<%=contextPath%>/webjars/jasmine/<%=getProp("version.jasmine")%>/jasmine-html'],
+					'jasmine-boot': ['<%=contextPath%>/webjars/jasmine/<%=getProp("version.jasmine")%>/boot'],
+					'jquery': ["<%=contextPath%>/webjars/jquery/<%= getProp("version.jquery")%>/jquery"]
 				},
 				shim: {
 					'jasmine-html': {
