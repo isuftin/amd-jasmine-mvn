@@ -17,7 +17,6 @@
 		String result = props.getProperty(key, "");
 		return result;
 	}
-
 %>
 <%
 	ServletContext ctx = request.getServletContext();
@@ -30,11 +29,9 @@
         <title>JSP Page</title>
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/webjars/jasmine/<%=getProp("version.jasmine")%>/jasmine_favicon.png">
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/webjars/jasmine/<%=getProp("version.jasmine")%>/jasmine.css">
-
 		<script data-main="jasmine-entry" src="<%=contextPath%>/webjars/requirejs/<%=getProp("version.require")%>/require.js"></script>
 		<script>
 			require.config({
-				// to set the default folder
 				baseUrl: '<%=contextPath%>/scripts',
 				paths: {
 					'jasmine-entry': ['<%=contextPath%>/test/jasmine-entry'],

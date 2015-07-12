@@ -1,5 +1,5 @@
 define(["./messages"], function (messages) {
-	
+
 	/**
 	 * Given a message, will print to console if console is available
 	 * @param {type} message
@@ -12,9 +12,9 @@ define(["./messages"], function (messages) {
 		}
 		return false;
 	};
-	
+
 	return {
-		printMessage : function (message) {
+		printMessage: function (message) {
 			var _message = messages.getMessage(message);
 			return log(_message);
 		}

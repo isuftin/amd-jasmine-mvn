@@ -11,11 +11,12 @@ import org.glassfish.jersey.servlet.ServletProperties;
  */
 @ApplicationPath("/ui")
 public class EntryRestApplication extends ResourceConfig {
+
 	public EntryRestApplication() {
 		packages(this.getClass().getPackage().getName());
 		property(JspMvcFeature.TEMPLATE_BASE_PATH, "/WEB-INF/jsp");
 		property(ServletProperties.FILTER_STATIC_CONTENT_REGEX, "/(resources|(WEB-INF/jsp))/.*");
 		register(JspMvcFeature.class);
 	}
-	
+
 }

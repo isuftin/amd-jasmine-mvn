@@ -1,7 +1,5 @@
 package gov.usgs.cida.rest.entry;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -15,10 +13,10 @@ import org.glassfish.jersey.server.mvc.Viewable;
  */
 @Path("/")
 public class EntryResource {
-	
+
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public Response createInitialEntry() {
-		return  Response.ok(new Viewable("/index")).build();
+		return Response.ok(new Viewable("/index")).build();
 	}
 }
