@@ -31,13 +31,22 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div id="container">
+			<div id="menu"></div>
+			<div id="content"></div>
+		</div>
 		<script data-main="scripts/main" src="<%=contextPath%>/webjars/requirejs/<%= getProp("version.require")%>/require.js"></script>
 		<script>
 			require.config({
 				baseUrl: "<%=contextPath%>/scripts/",
 				paths: {
-					"jquery": "<%=contextPath%>/webjars/jquery/<%= getProp("version.jquery")%>/jquery"
+					"jquery": ["<%=contextPath%>/webjars/jquery/<%= getProp("version.jquery")%>/jquery"],
+					"backbone": ['<%=contextPath%>/webjars/backbonejs/<%= getProp("version.backbone")%>/backbone'],
+					"underscore": ['<%=contextPath%>/webjars/underscorejs/<%= getProp("version.underscore")%>/underscore'],
+					"text": ['<%=contextPath%>/webjars/requirejs-text/<%= getProp("version.require.text")%>/text']
+				},
+				shim: {
+					'backbone': ['underscore']
 				}
 			});
 		</script>

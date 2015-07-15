@@ -1,4 +1,9 @@
-	baseUrl: 'scripts',
-	paths: {
-		'jquery': ['/webjars/jquery/${version.jquery}/jquery']
-	}
+baseUrl: 'scripts',
+paths: {
+	'jquery': ['/webjars/jquery/${version.jquery}/jquery'],
+	'backbone': ['/webjars/backbonejs/${version.backbone}/backbone'],
+	'underscore': ['/webjars/underscorejs/${version.underscore}/underscore']
+},
+shim: {
+	'backbone' : ['underscore']
+}

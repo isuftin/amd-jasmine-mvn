@@ -16,7 +16,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.jquery>2.1.4</version.jquery>
 		<version.require>2.1.18</version.require>
+		<version.require.text>2.0.14</version.require.text>
 		<version.jasmine>2.2.0</version.jasmine>
+		<version.backbone>1.2.1</version.backbone>
+		<version.underscore>1.8.3</version.underscore>
 	</properties>
 
 	<dependencies>
@@ -81,8 +84,23 @@
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
+			<artifactId>requirejs-text</artifactId>
+			<version>${version.require.text}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
 			<artifactId>jasmine</artifactId>
 			<version>${version.jasmine}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>backbonejs</artifactId>
+			<version>${version.backbone}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>underscorejs</artifactId>
+			<version>${version.underscore}</version>
 		</dependency>
 	</dependencies>
 

@@ -1,3 +1,3 @@
-requirejs(["messages/printer", "jquery"], function (printer, $) {
-	return printer.printMessage("hello");
+requirejs(["jquery", "app"], function ($, app) {
+	app.initialize();
 });

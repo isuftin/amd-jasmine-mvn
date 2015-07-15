@@ -19,4 +19,18 @@ public class EntryResource {
 	public Response createInitialEntry() {
 		return Response.ok(new Viewable("/index")).build();
 	}
+	
+	@GET
+	@Path("/users")
+	@Produces(MediaType.TEXT_HTML)
+	public Response createUsers() {
+		return Response.ok(new Viewable("/index")).build();
+	}
+	
+	@GET
+	@Path("/projects")
+	@Produces(MediaType.TEXT_HTML)
+	public Response createProjects() {
+		return Response.ok(new Viewable("/index")).build();
+	}
 }
