@@ -1,0 +1,15 @@
+
+<div>
+	Welcome to: <%= name %>
+	<br />
+	<% _.each(plants, function (plant) { %>
+	<p>
+		Plant name: <%= plant.name %>
+		<br />
+		Plant color: <%= plant.color %>
+		<br />
+		Is fruit bearing?: <%= plant.fruit_bearing %>
+	</p>
+	<% }) %>
+	<br />
+</div>

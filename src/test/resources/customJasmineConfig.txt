@@ -1,9 +1,12 @@
 baseUrl: 'scripts',
 paths: {
+	'sinon': ['/webjars/sinonjs/${version.sinon}/sinon'],
 	'jquery': ['/webjars/jquery/${version.jquery}/jquery'],
 	'backbone': ['/webjars/backbonejs/${version.backbone}/backbone'],
 	'underscore': ['/webjars/underscorejs/${version.underscore}/underscore']
 },
 shim: {
-	'backbone' : ['underscore']
+	'sinon' : {
+		'exports' : 'sinon'
+	}
 }

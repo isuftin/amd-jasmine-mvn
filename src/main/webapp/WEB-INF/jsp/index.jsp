@@ -28,27 +28,31 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Backbone/RequireJS/WebJars/Jasmine/Sinon</title>
     </head>
     <body>
-        <div id="container">
-			<div id="menu"></div>
-			<div id="content"></div>
+        <div id="container"></div>
+		<div id="links">
+			<ul>
+				<li>
+					<a href="#gardens">View All Gardens</a>
+				</li>
+				<li>
+					<a href="#plants">View All Plants</a>
+				</li>
+			</ul>
 		</div>
-		<script data-main="scripts/main" src="<%=contextPath%>/webjars/requirejs/<%= getProp("version.require")%>/require.js"></script>
 		<script>
-			require.config({
+			var require = {
 				baseUrl: "<%=contextPath%>/scripts/",
 				paths: {
 					"jquery": ["<%=contextPath%>/webjars/jquery/<%= getProp("version.jquery")%>/jquery"],
 					"backbone": ['<%=contextPath%>/webjars/backbonejs/<%= getProp("version.backbone")%>/backbone'],
 					"underscore": ['<%=contextPath%>/webjars/underscorejs/<%= getProp("version.underscore")%>/underscore'],
 					"text": ['<%=contextPath%>/webjars/requirejs-text/<%= getProp("version.require.text")%>/text']
-				},
-				shim: {
-					'backbone': ['underscore']
 				}
-			});
+			};
 		</script>
+		<script data-main="main" src="<%=contextPath%>/webjars/requirejs/<%= getProp("version.require")%>/require.js"></script>
     </body>
 </html>

@@ -1,0 +1,6 @@
+<ul>
+	Plants available for viewing:
+	<% _.each(plants, function (plant) {%>
+	<li><a href="#plant/<%= plant.name %>"><%= plant.name %></a></li>
+	<% }) %>
+</ul>

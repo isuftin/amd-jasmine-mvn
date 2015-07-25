@@ -20,6 +20,7 @@
 		<version.jasmine>2.2.0</version.jasmine>
 		<version.backbone>1.2.1</version.backbone>
 		<version.underscore>1.8.3</version.underscore>
+		<version.sinon>1.7.3</version.sinon>
 	</properties>
 
 	<dependencies>
@@ -47,6 +48,13 @@
 			<groupId>xerces</groupId>
 			<artifactId>xercesImpl</artifactId>
 			<version>2.11.0</version>
+		</dependency>
+		
+		<!-- JSON parsing/creation -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.3.1</version>
 		</dependency>
 		
 		<!-- Jersey Stuff -->
@@ -101,6 +109,11 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>underscorejs</artifactId>
 			<version>${version.underscore}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>sinonjs</artifactId>
+			<version>${version.sinon}-1</version>
 		</dependency>
 	</dependencies>
 

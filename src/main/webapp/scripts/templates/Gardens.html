@@ -1,0 +1,6 @@
+<ul>
+	Gardens available for viewing:
+	<% _.each(gardens, function (garden) {%>
+	<li><a href="#garden/<%= garden.name %>"><%= garden.name %></a></li>
+	<% }) %>
+</ul>
