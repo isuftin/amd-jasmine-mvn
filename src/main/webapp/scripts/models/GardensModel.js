@@ -8,7 +8,16 @@ define([
 
 	var GardensModel = Backbone.Model.extend({
 		url: "data/garden",
-		idAttribute: 'name'
+		idAttribute: 'name',
+		validate: function (attrs, options) {
+			if (!attrs.name) {
+				return "name is required";
+			}
+
+			if (typeof attrs.name !== "string") {
+				return "attribute 'name' must be a string";
+			}
+		}
 	});
 
 	return GardensModel;

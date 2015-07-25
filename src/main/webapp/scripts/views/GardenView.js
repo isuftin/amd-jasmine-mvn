@@ -13,6 +13,7 @@ define([
 			this.listenTo(this.collection, "reset", this.render);
 		},
 		render: function () {
+			debugger;
 			var plants = this.collection.toJSON();
 			var name = this.collection.id;
 			var compiledTemplate = this.template({

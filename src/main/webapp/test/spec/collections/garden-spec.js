@@ -1,4 +1,4 @@
-define(["models/PlantModel", "collections/GardenCollection", "sinon"], function (Plant, Garden, sinon) {
+define(["collections/GardenCollection", "sinon"], function (Garden, sinon) {
 	describe("Garden", function () {
 		var gardens = [{"name": "olbrich"}, {"name": "arboretum"}, {"name": "rotary"}];
 		beforeEach(function () {

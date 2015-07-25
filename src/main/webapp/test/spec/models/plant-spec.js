@@ -25,19 +25,18 @@ define(["models/PlantModel", "sinon"], function (Plant, sinon) {
 					'color': 'test color',
 					'fruit_bearing': 'not a boolean'
 				}
-
+;
 				var exp = new Plant(pType);
-				expect(exp.isValid()).toBe(false);
+				expect(exp.isValid()).toBeFalsy();
 				expect(exp.validationError).toBe("attribute 'fruit_bearing' must be a boolean");
 			});
-
 
 			it("should trigger change events when properties change", function () {
 				var pType = {
 					'name': 'test name',
 					'color': 'test color',
 					'fruit_bearing': false
-				}
+				};
 				var spy = sinon.spy();
 				var exp = new Plant(pType);
 				exp.bind('change', spy);
@@ -46,5 +45,5 @@ define(["models/PlantModel", "sinon"], function (Plant, sinon) {
 				expect(spy.called).toBeTruthy();
 			});
 		});
-	})
-})
+	});
+});
