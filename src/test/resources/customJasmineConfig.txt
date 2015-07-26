@@ -4,8 +4,7 @@ paths: {
 	'jquery': ['/webjars/jquery/${version.jquery}/jquery'],
 	'backbone': ['/webjars/backbonejs/${version.backbone}/backbone'],
 	'underscore': ['/webjars/underscorejs/${version.underscore}/underscore'],
-	'text': ['/webjars/requirejs-text/${version.require.text}/text'],
-	'squire': ['/webjars/squirejs/${version.squire}/Squire']
+	'text': ['/webjars/requirejs-text/${version.require.text}/text']
 },
 shim: {
 	'sinon' : {
