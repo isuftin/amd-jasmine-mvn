@@ -1,8 +1,10 @@
 define([
-	'router'
-], function (Router) {
+	'router',
+	'backbone'
+], function (Router, Backbone) {
 	var initialize = function () {
-		Router.initialize();
+		new Router();
+		Backbone.history.start({root: '/amd-jasmine-mvn/ui/'});
 	};
 
 	return {

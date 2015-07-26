@@ -18,9 +18,11 @@
 		<version.require>2.1.18</version.require>
 		<version.require.text>2.0.14</version.require.text>
 		<version.jasmine>2.2.0</version.jasmine>
+		<version.jasmine.sinon>0.4.0</version.jasmine.sinon>
 		<version.backbone>1.2.1</version.backbone>
 		<version.underscore>1.8.3</version.underscore>
 		<version.sinon>1.7.3</version.sinon>
+		<version.squire>0.1.0</version.squire>
 	</properties>
 
 	<dependencies>
@@ -114,6 +116,11 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>sinonjs</artifactId>
 			<version>${version.sinon}-1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>squirejs</artifactId>
+			<version>${version.squire}</version>
 		</dependency>
 	</dependencies>
 
