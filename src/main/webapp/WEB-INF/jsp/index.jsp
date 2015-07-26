@@ -44,6 +44,11 @@
 		</div>
 		<script>
 			var require = {
+				config: {
+					'main': {
+						'contextPath' : "<%=contextPath%>/ui/"
+					}
+				},
 				baseUrl: "<%=contextPath%>/scripts/",
 				paths: {
 					"jquery": ["<%=contextPath%>/webjars/jquery/<%= getProp("version.jquery")%>/jquery"],

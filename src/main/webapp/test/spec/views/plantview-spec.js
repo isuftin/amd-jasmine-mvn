@@ -28,7 +28,6 @@ define([
 				expect(this.view.$el.html()).toContain("test color");
 				expect(this.view.$el.html()).toContain("true");
 			});
-
 		});
 
 		afterEach(function () {
